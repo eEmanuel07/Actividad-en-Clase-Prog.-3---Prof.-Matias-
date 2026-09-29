@@ -1,0 +1,96 @@
+/* ==========================================================
+   Cartelera del curso - styles.css
+   Cada integrante escribe SOLO dentro de su sección.
+   Antes de cada push: git pull
+   ========================================================== */
+
+
+/* ==========================================================
+   === ELIAS: 1. Base y selectores ===
+   Consigna:
+   - Vincular el CSS externo (ya está en el HTML).
+   - Definir box-sizing: border-box.
+   - Reglas para al menos: un selector de elemento, una clase
+     y el ID #titulo.
+   ========================================================== */
+
+
+
+
+
+/* ==========================================================
+   === BELEN: 2. Texto y cajas ===
+   Consigna:
+   - Dar jerarquía al título, subtítulos y párrafos con color,
+     tamaño, peso o alineación.
+   - En .tarjeta usar: fondo, ancho o tamaño adaptable, padding,
+     margin y border.
+   - Observar en el navegador qué espacio es contenido, relleno
+     y margen.
+   ========================================================== */
+
+
+
+
+
+/* ==========================================================
+   === JOAQUIN: 3. BEM y visualización + 6. Posición y capas ===
+   Consigna punto 3:
+   - Mantener los nombres: tarjeta, tarjeta__titulo,
+     tarjeta__etiqueta y tarjeta--destacada.
+   - Hacer visible la diferencia entre la tarjeta destacada
+     y las demás.
+   - Usar display en al menos un elemento.
+
+   Consigna punto 6:
+   - Colocar la etiqueta "Nueva" dentro de la tarjeta destacada:
+     position: relative en la tarjeta y position: absolute
+     en la etiqueta.
+   - Si se superpone con otro elemento, ajustar z-index.
+   ========================================================== */
+
+
+
+
+
+/* ==========================================================
+   === BRUNO: 4. Flexbox y Grid ===
+   Consigna:
+   - Organizar .cabecera con Flexbox.
+   - Organizar .cartelera con Grid, gap y columnas que puedan
+     adaptarse.
+   - No hace falta combinar ambos en el mismo contenedor.
+   (El punto 7, la media query, va al FINAL del archivo.)
+   ========================================================== */
+
+
+
+
+
+/* ==========================================================
+   === HERNAN: 5. Selectores y estados + 8. Mini experimento ===
+   Consigna punto 5:
+   - Usar un combinador (ej: .cartelera .tarjeta__enlace).
+   - :hover para los enlaces.
+   - :focus para reconocerlos con Tab.
+   - :nth-child() para dar un detalle distinto a una tarjeta.
+
+   Consigna punto 8:
+   - Comparar display: none, visibility: hidden y opacity: 0
+     sobre .aviso, de a uno por vez.
+   - Anotar qué pasa con el espacio y cuál conserva la
+     posibilidad de interacción.
+   - Dejar el aviso visible al entregar.
+   ========================================================== */
+
+
+
+
+
+/* ==========================================================
+   === BRUNO: 7. Adaptación móvil ===
+   Consigna:
+   - Con una media query, mostrar una sola columna de tarjetas
+     cuando la pantalla sea angosta.
+   - Probar el cambio achicando el navegador.
+   ========================================================== */

@@ -167,6 +167,61 @@ p{
    - Dejar el aviso visible al entregar.
    ========================================================== */
 
+/* 1. Combinador de descendencia: solo los enlaces dentro de .cartelera */
+.cartelera .tarjeta__enlace {
+  color: #1a5fb4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 2. Estado :hover - el cursor esta encima */
+.cartelera .tarjeta__enlace:hover {
+  color: #c01c28;
+  text-decoration: underline;
+}
+
+/* 3. Estado :focus - se ve al navegar con Tab (outline siempre visible) */
+.cartelera .tarjeta__enlace:focus {
+  outline: 3px dashed #e01b24;
+  outline-offset: 3px;
+  color: #c01c28;
+}
+
+/* 4. :nth-child() - detalle distinto a la 2da tarjeta
+      (hijo 1 = destacada, 2 = Laboratorio de cajas, 3 = Reto responsive) */
+.cartelera .tarjeta:nth-child(2) {
+  border-left: 6px solid #2ec4b6;
+  background-color: #f2fbf9;
+}
+
+.cartelera .tarjeta:nth-child(2) .tarjeta__titulo {
+  color: #12776e;
+}
+
+/* ---------- PUNTO 8: experimento con .aviso ----------
+   display: none       -> invisible, NO deja espacio, no se puede
+                          seleccionar ni clickear, ni recibe foco.
+   visibility: hidden  -> invisible, SI deja espacio, sigue siendo
+                          seleccionable y enfocable, pero no
+                          recibe clics.
+   opacity: 0          -> invisible, SI deja espacio y SI se puede
+                          interactuar (invisible a la vista,
+                          presente para el resto).
+   Se entrega VISIBLE: los tres quedan comentados.
+---------------------------------------------------- */
+
+/* .aviso { display: none; } */
+/* .aviso { visibility: hidden; } */
+/* .aviso { opacity: 0; } */
+
+/* version final: el aviso se ve (refuerzo visual, sin esconderlo) */
+.aviso {
+  background-color: #fff3cd;
+  border: 1px solid #e0a800;
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: #5c4600;
+}
 
 
 

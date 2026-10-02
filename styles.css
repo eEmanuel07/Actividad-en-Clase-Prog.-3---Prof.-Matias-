@@ -43,6 +43,15 @@ body {
   letter-spacing: 0.02em;
 }
 
+/* Espacio a los bordes de la página */
+.cabecera,
+main {
+  padding: 16px 24px;
+}
+
+/* ==========================================================
+   === BELEN: 2. Texto y cajas ===
+
 /* ==========================================================
    === BELEN: 2. Texto y cajas ===
    Consigna:

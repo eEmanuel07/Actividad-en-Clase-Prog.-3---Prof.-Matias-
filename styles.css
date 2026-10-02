@@ -212,13 +212,12 @@ p{
 
 /* ---------- PUNTO 8: experimento con .aviso ----------
    display: none       -> invisible, NO deja espacio, no se puede
-                          seleccionar ni clickear, ni recibe foco.
-   visibility: hidden  -> invisible, SI deja espacio, sigue siendo
-                          seleccionable y enfocable, pero no
-                          recibe clics.
-   opacity: 0          -> invisible, SI deja espacio y SI se puede
-                          interactuar (invisible a la vista,
-                          presente para el resto).
+                          clickear ni enfocar con Tab.
+   visibility: hidden  -> invisible, SI deja espacio, pero NO se
+                          puede clickear ni enfocar con Tab.
+   opacity: 0          -> invisible, SI deja espacio y SI conserva
+                          la interacción (se puede clickear y
+                          enfocar aunque no se vea).
    Se entrega VISIBLE: los tres quedan comentados.
 ---------------------------------------------------- */
 
@@ -251,5 +250,4 @@ p{
   .cabecera {
     flex-direction: column;
   }
-
 }

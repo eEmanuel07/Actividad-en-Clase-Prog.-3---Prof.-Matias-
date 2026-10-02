@@ -252,8 +252,4 @@ p{
     flex-direction: column;
   }
 
-  /* con margen a los costados la tarjeta se pasaba del ancho en celus de 360px */
-  .tarjeta {
-    margin: 12px 0;
-  }
 }

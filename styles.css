@@ -74,10 +74,8 @@ p{
 
 .tarjeta {
   background-color: #ffffff;
-  width: 100%;
-  max-width: 360px;
   padding: 20px;
-  margin:12px;
+  margin: 0;
   border: 2px solid #d1d5db;
   border-radius: 8px;
 }

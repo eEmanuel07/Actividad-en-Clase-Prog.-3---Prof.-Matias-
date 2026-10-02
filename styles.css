@@ -51,9 +51,6 @@ main {
 
 /* ==========================================================
    === BELEN: 2. Texto y cajas ===
-
-/* ==========================================================
-   === BELEN: 2. Texto y cajas ===
    Consigna:
    - Dar jerarquía al título, subtítulos y párrafos con color,
      tamaño, peso o alineación.
@@ -142,8 +139,6 @@ p{
   border-radius: 999px;
 }
 
-
-
 /* ==========================================================
    === BRUNO: 4. Flexbox y Grid ===
    Consigna:
@@ -167,8 +162,6 @@ p{
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
-
-
 
 /* ==========================================================
    === HERNAN: 5. Selectores y estados + 8. Mini experimento ===
@@ -241,8 +234,6 @@ p{
   padding: 10px 14px;
   color: #5c4600;
 }
-
-
 
 
 /* ==========================================================

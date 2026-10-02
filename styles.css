@@ -13,6 +13,8 @@
    - Reglas para al menos: un selector de elemento, una clase
      y el ID #titulo.
    ========================================================== */
+
+/* Selector universal */
 *,
 *::before,
 *::after {
@@ -40,6 +42,13 @@ body {
   font-size: 2rem;
   letter-spacing: 0.02em;
 }
+
+/* Espacio a los bordes de la página */
+.cabecera,
+main {
+  padding: 16px 24px;
+}
+
 /* ==========================================================
    === BELEN: 2. Texto y cajas ===
    Consigna:
@@ -71,10 +80,8 @@ p{
 
 .tarjeta {
   background-color: #ffffff;
-  width: 100%;
-  max-width: 360px;
   padding: 20px;
-  margin:12px;
+  margin: 0;
   border: 2px solid #d1d5db;
   border-radius: 8px;
 }
@@ -96,8 +103,41 @@ p{
    ========================================================== */
 
 
+.tarjeta--destacada {
+  background-color: #eff6ff;
+  border-color: #1d4ed8;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+}
+
+.tarjeta--destacada .tarjeta__titulo {
+  color: #1e3a8a;
+  padding-right: 70px; 
+}
+
+.tarjeta__enlace {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 600;
+}
 
 
+.tarjeta--destacada {
+  position: relative;
+}
+
+.tarjeta__etiqueta {
+  display: inline-block;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  padding: 4px 10px;
+  background-color: #dc2626;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 999px;
+}
 
 /* ==========================================================
    === BRUNO: 4. Flexbox y Grid ===
@@ -108,10 +148,20 @@ p{
    - No hace falta combinar ambos en el mismo contenedor.
    (El punto 7, la media query, va al FINAL del archivo.)
    ========================================================== */
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
 
-
-
-
+/* auto-fit arma tantas columnas como entren, cada una de minimo 250px */
+.cartelera {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
 /* ==========================================================
    === HERNAN: 5. Selectores y estados + 8. Mini experimento ===
@@ -129,8 +179,60 @@ p{
    - Dejar el aviso visible al entregar.
    ========================================================== */
 
+/* 1. Combinador de descendencia: solo los enlaces dentro de .cartelera */
+.cartelera .tarjeta__enlace {
+  color: #1a5fb4;
+  text-decoration: none;
+  font-weight: bold;
+}
 
+/* 2. Estado :hover - el cursor esta encima */
+.cartelera .tarjeta__enlace:hover {
+  color: #c01c28;
+  text-decoration: underline;
+}
 
+/* 3. Estado :focus - se ve al navegar con Tab (outline siempre visible) */
+.cartelera .tarjeta__enlace:focus {
+  outline: 3px dashed #e01b24;
+  outline-offset: 3px;
+  color: #c01c28;
+}
+
+/* 4. :nth-child() - detalle distinto a la 2da tarjeta
+      (hijo 1 = destacada, 2 = Laboratorio de cajas, 3 = Reto responsive) */
+.cartelera .tarjeta:nth-child(2) {
+  border-left: 6px solid #2ec4b6;
+  background-color: #f2fbf9;
+}
+
+.cartelera .tarjeta:nth-child(2) .tarjeta__titulo {
+  color: #12776e;
+}
+
+/* ---------- PUNTO 8: experimento con .aviso ----------
+   display: none       -> invisible, NO deja espacio, no se puede
+                          clickear ni enfocar con Tab.
+   visibility: hidden  -> invisible, SI deja espacio, pero NO se
+                          puede clickear ni enfocar con Tab.
+   opacity: 0          -> invisible, SI deja espacio y SI conserva
+                          la interacción (se puede clickear y
+                          enfocar aunque no se vea).
+   Se entrega VISIBLE: los tres quedan comentados.
+---------------------------------------------------- */
+
+/* .aviso { display: none; } */
+/* .aviso { visibility: hidden; } */
+/* .aviso { opacity: 0; } */
+
+/* version final: el aviso se ve (refuerzo visual, sin esconderlo) */
+.aviso {
+  background-color: #fff3cd;
+  border: 1px solid #e0a800;
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: #5c4600;
+}
 
 
 /* ==========================================================
@@ -140,3 +242,12 @@ p{
      cuando la pantalla sea angosta.
    - Probar el cambio achicando el navegador.
    ========================================================== */
+@media (max-width: 600px) {
+  .cartelera {
+    grid-template-columns: 1fr;
+  }
+
+  .cabecera {
+    flex-direction: column;
+  }
+}
